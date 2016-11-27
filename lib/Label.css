@@ -1,0 +1,12 @@
+.mola-label {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+}
+.mola-label img {
+  width: 100%;
+}
+.mola-label p {
+  line-height: 1;
+  margin: 0;
+}

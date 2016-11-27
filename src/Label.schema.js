@@ -37,7 +37,7 @@ const DEFAULT_SCHEMA = {
             'type': 'number',
             'default': 14
         },
-        type: {
+        labelType: {
             'title': '类型',
             'type': 'string',
             'enum': ['text', 'image'],
@@ -53,7 +53,7 @@ const DEFAULT_SCHEMA = {
 
 export default function (props) {
 
-    switch (props.type) {
+    switch (props.labelType) {
         case 'image':
             return update(DEFAULT_SCHEMA, {
                 properties: {

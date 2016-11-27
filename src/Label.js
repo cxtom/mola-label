@@ -24,7 +24,7 @@ export class Label extends Component {
             left,
             width,
             height,
-            type,
+            labelType,
             imageUrl,
             text,
             fontSize,
@@ -42,7 +42,7 @@ export class Label extends Component {
                     width: px2rem(width),
                     height: px2rem(height)
                 }}>
-                {type === 'image'
+                {labelType === 'image'
                     ? <img src={imageUrl} />
                     : <p style={{
                         fontSize: px2rem(fontSize),
@@ -62,7 +62,7 @@ Label.propTypes = {
     left: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
-    type: PropTypes.oneOf(['text', 'image']).isRequired,
+    labelType: PropTypes.oneOf(['text', 'image']).isRequired,
     imageUrl: PropTypes.string,
     text: PropTypes.string,
     fontSize: PropTypes.number,
@@ -75,7 +75,7 @@ Label.defaultProps = {
     left: 0,
     width: 50,
     height: 14,
-    type: 'text',
+    labelType: 'text',
     fontSize: 14,
     color: '#000',
     lineHeight: 14

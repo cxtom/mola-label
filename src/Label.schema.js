@@ -1,5 +1,5 @@
 /**
- * @file 音频组件
+ * @file 标签组件
  * @author cxtom <cxtom2008@gmail.com>
  */
 
@@ -42,8 +42,8 @@ const DEFAULT_SCHEMA = {
             'type': 'string',
             'enum': ['text', 'image'],
             'enumNames': [
-                '视频网站分享',
-                'mp4文件'
+                '文字',
+                '图片'
             ],
             'default': 'text'
         }
@@ -53,7 +53,7 @@ const DEFAULT_SCHEMA = {
 
 export default function (props) {
 
-    switch (props.videoType) {
+    switch (props.type) {
         case 'image':
             return update(DEFAULT_SCHEMA, {
                 properties: {

@@ -29,7 +29,8 @@ export class Label extends Component {
             text,
             fontSize,
             color,
-            lineHeight
+            lineHeight,
+            textAlign
         } = this.props;
 
         return (
@@ -47,6 +48,7 @@ export class Label extends Component {
                     : <p style={{
                         fontSize: px2rem(fontSize),
                         color,
+                        textAlign,
                         lineHeight: `${lineHeight / fontSize}em`
                     }}>{text}</p>}
             </div>
@@ -67,7 +69,8 @@ Label.propTypes = {
     text: PropTypes.string,
     fontSize: PropTypes.number,
     color: PropTypes.string,
-    lineHeight: PropTypes.number
+    lineHeight: PropTypes.number,
+    textAlign: PropTypes.oneOf(['left', 'right', 'center'])
 };
 
 Label.defaultProps = {
@@ -78,7 +81,8 @@ Label.defaultProps = {
     labelType: 'text',
     fontSize: 14,
     color: '#000',
-    lineHeight: 14
+    lineHeight: 14,
+    textAlign: 'left'
 };
 
 export default registerComponent(type, level)(Label);

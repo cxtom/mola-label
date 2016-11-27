@@ -90,6 +90,17 @@ export default function (props) {
                             'type': 'number',
                             'default': 14
                         },
+                        textAlign: {
+                            'title': '类型',
+                            'type': 'string',
+                            'enum': ['left', 'right', 'center'],
+                            'enumNames': [
+                                '居左',
+                                '居右',
+                                '居中'
+                            ],
+                            'default': 'left'
+                        },
                         color: {
                             'title': '文字颜色',
                             'type': 'string',

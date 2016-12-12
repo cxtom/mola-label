@@ -1,6 +1,6 @@
 {
   "name": "mola-label",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A mola label component",
   "main": "lib/Label.js",
   "scripts": {

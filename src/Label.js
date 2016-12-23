@@ -60,28 +60,28 @@ export class Label extends Component {
 Label.displayName = type;
 
 Label.propTypes = {
-    top: PropTypes.number.isRequired,
-    left: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
+    top: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+    left: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
     labelType: PropTypes.oneOf(['text', 'image']).isRequired,
     imageUrl: PropTypes.string,
     text: PropTypes.string,
-    fontSize: PropTypes.number,
+    fontSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     color: PropTypes.string,
-    lineHeight: PropTypes.number,
+    lineHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     textAlign: PropTypes.oneOf(['left', 'right', 'center'])
 };
 
 Label.defaultProps = {
-    top: 0,
-    left: 0,
-    width: 50,
-    height: 14,
+    top: '0',
+    left: '0',
+    width: '50',
+    height: '14',
     labelType: 'text',
-    fontSize: 14,
+    fontSize: '14',
     color: '#000',
-    lineHeight: 14,
+    lineHeight: '14',
     textAlign: 'left'
 };
 

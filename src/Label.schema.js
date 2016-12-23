@@ -19,23 +19,31 @@ const DEFAULT_SCHEMA = {
     properties: {
         top: {
             'title': 'top',
-            'type': 'number',
-            'default': 0
+            'type': 'string',
+            'format': 'numeric',
+            'formatMinimum': '0',
+            'default': '0'
         },
         left: {
             'title': 'left',
-            'type': 'number',
-            'default': 0
+            'type': 'string',
+            'format': 'numeric',
+            'formatMinimum': '0',
+            'default': '0'
         },
         width: {
             'title': '宽度',
-            'type': 'number',
-            'default': 50
+            'type': 'string',
+            'format': 'numeric',
+            'formatMinimum': '0',
+            'default': '50'
         },
         height: {
             'title': '高度',
-            'type': 'number',
-            'default': 14
+            'type': 'string',
+            'format': 'numeric',
+            'formatMinimum': '0',
+            'default': '14'
         },
         labelType: {
             'title': '类型',
@@ -82,13 +90,17 @@ export default function (props) {
                         },
                         fontSize: {
                             'title': '字体大小',
-                            'type': 'number',
-                            'default': 14
+                            'type': 'string',
+                            'format': 'numeric',
+                            'formatMinimum': '12',
+                            'default': '14'
                         },
                         lineHeight: {
                             'title': '行高',
-                            'type': 'number',
-                            'default': 14
+                            'type': 'string',
+                            'format': 'numeric',
+                            'formatMinimum': '12',
+                            'default': '14'
                         },
                         textAlign: {
                             'title': '类型',
@@ -105,7 +117,7 @@ export default function (props) {
                             'title': '文字颜色',
                             'type': 'string',
                             'format': 'color',
-                            'default': '#000'
+                            'default': '#000000'
                         }
                     }
                 },
